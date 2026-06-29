@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/hero.svg" alt="yaegi" width="880"></p>
+
 <p align="center">
 <img width="400" src="doc/images/yaegi.png" alt="Yaegi" title="Yaegi" />
 </p>
