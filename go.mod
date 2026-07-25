@@ -1,3 +1,3 @@
-module github.com/traefik/yaegi
+module github.com/hanzoai/yaegi
 
 go 1.21

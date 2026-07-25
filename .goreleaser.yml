@@ -48,13 +48,13 @@ archives:
 
 brews:
   - repository:
-      owner: traefik
+      owner: hanzoai
       name: homebrew-tap
     commit_author:
-      name: traefiker
-      email: 30906710+traefiker@users.noreply.github.com
+      name: hanzoaier
+      email: 30906710+hanzoaier@users.noreply.github.com
     folder: Formula
-    homepage: https://github.com/traefik/yaegi
+    homepage: https://github.com/hanzoai/yaegi
     description: |
       Yaegi is Another Elegant Go Interpreter.
       It powers executable Go scripts and plugins, in embedded interpreters

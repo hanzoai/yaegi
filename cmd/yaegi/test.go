@@ -12,11 +12,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/traefik/yaegi/interp"
-	"github.com/traefik/yaegi/stdlib"
-	"github.com/traefik/yaegi/stdlib/syscall"
-	"github.com/traefik/yaegi/stdlib/unrestricted"
-	"github.com/traefik/yaegi/stdlib/unsafe"
+	"github.com/hanzoai/yaegi/interp"
+	"github.com/hanzoai/yaegi/stdlib"
+	"github.com/hanzoai/yaegi/stdlib/syscall"
+	"github.com/hanzoai/yaegi/stdlib/unrestricted"
+	"github.com/hanzoai/yaegi/stdlib/unsafe"
 )
 
 func test(arg []string) (err error) {

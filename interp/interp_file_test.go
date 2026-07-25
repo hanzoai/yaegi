@@ -11,9 +11,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/traefik/yaegi/interp"
-	"github.com/traefik/yaegi/stdlib"
-	"github.com/traefik/yaegi/stdlib/unsafe"
+	"github.com/hanzoai/yaegi/interp"
+	"github.com/hanzoai/yaegi/stdlib"
+	"github.com/hanzoai/yaegi/stdlib/unsafe"
 )
 
 // The following tests sometimes (not always) crash with go1.21 but not with go1.20 or go1.22.
