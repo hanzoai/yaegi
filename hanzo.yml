@@ -1,0 +1,26 @@
+# Native CI for hanzoai/yaegi, on the git.hanzo.ai runner fleet.
+#
+# No images: this is a Go interpreter consumed as a module. The `yaegi` command
+# is not published from here — the goreleaser lane that used to cut it ran on
+# GitHub's machines and is gone; when it is wanted back it is a `binaries:`
+# block in this file, not a second pipeline.
+test:
+  - name: build
+    run: |
+      set -e
+      go build ./...
+  - name: unit
+    # The interp tests import fixtures out of _test/ by module path and resolve
+    # them through GOPATH, not through the module graph — so `go test ./...` in
+    # an ordinary checkout fails four of them with
+    #     package location /…/_test not in GOPATH
+    # Upstream answered that by checking out into go/src/github.com/…; a
+    # symlink into a GOPATH tree is the same answer without a second checkout.
+    # Measured both ways: 4 failures plain, 7 packages ok this way, ~2 min.
+    run: |
+      set -e
+      root="${RUNNER_TEMP:-/tmp}/gopath"
+      mkdir -p "$root/src/github.com/hanzoai"
+      ln -sfn "$PWD" "$root/src/github.com/hanzoai/yaegi"
+      cd "$root/src/github.com/hanzoai/yaegi"
+      GOPATH="$root" go test ./... -count=1
