@@ -13,6 +13,8 @@ It powers executable Go scripts and plugins, in embedded interpreters or interac
 
 ## Features
 
+[![Open in Hanzo](https://hanzo.app/badges/open-in-hanzo.svg)](https://hanzo.app/dev/open?repo=github.com/hanzoai/yaegi&ref=main&action=open) [![Edit with Hanzo](https://hanzo.app/badges/edit-with-hanzo.svg)](https://hanzo.app/dev/open?repo=github.com/hanzoai/yaegi&ref=main&action=edit) [![Deploy with Hanzo](https://hanzo.app/badges/deploy-with-hanzo.svg)](https://hanzo.app/dev/open?repo=github.com/hanzoai/yaegi&ref=main&action=deploy)
+
 * Complete support of [Go specification][specs]
 * Written in pure Go, using only the standard library
 * Simple interpreter API: `New()`, `Eval()`, `Use()`
